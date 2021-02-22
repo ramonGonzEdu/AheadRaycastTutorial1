@@ -143,6 +143,7 @@ public class RayCastShoot : MonoBehaviour
 			if (hit.rigidbody != null)
 			{
 				hit.rigidbody.AddForceAtPosition(fpsCamera.transform.forward * hitStr * gun.impactForce, hit.point, ForceMode.Impulse);
+				// hit.rigidbody.AddForce(fpsCamera.transform.forward * hitStr * gun.impactForce);
 			}
 
 			GameObject impactGO = Instantiate(impactEffect, hit.point, Quaternion.LookRotation(hit.normal));
